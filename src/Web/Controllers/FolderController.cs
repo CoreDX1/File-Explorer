@@ -15,7 +15,7 @@ public class FolderController : ControllerBase
     }
 
     [HttpGet]
-    [Route("folders")]
+    [Route("list")]
     public async Task<IActionResult> GetSubFoldersAsync(string path)
     {
         var subFolders = await _folderServices.GetSubFoldersAsync(path);
@@ -24,7 +24,7 @@ public class FolderController : ControllerBase
     }
 
     [HttpGet]
-    [Route("folders/{path}")]
+    [Route("{path}")]
     public async Task<IActionResult> GetFilesAsync(string path)
     {
         var files = await _folderServices.GetFilesAsync(path);

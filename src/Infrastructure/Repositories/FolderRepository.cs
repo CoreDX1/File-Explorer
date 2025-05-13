@@ -21,7 +21,10 @@ public class FolderRepository : IFolderRepository
             subFolders.Add(new Folder
             {
                 Name = Path.GetFileName(dir),
-                Path = dir
+                Path = dir,
+                CreatedAt = new FileInfo(dir).CreationTime,
+                ModifiedAt = new FileInfo(dir).LastWriteTime,
+                Size = new DirectoryInfo(dir).EnumerateFiles().Sum(file => file.Length)
             });
         }
 

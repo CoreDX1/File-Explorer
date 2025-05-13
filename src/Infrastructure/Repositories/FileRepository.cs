@@ -7,17 +7,25 @@ public class FileRepository : IFileRepository
 {
     public async Task<List<Files>> GetFilesAsync(string path)
     {
-        if (!Directory.Exists(path))
-            throw new ArgumentException("El directorio no existe.");
 
         string fullPath = Path.Combine("/home/christian/Desktop/Projects/File-Explorer/CONTENEDOR", path);
 
-        var files = Directory.GetFiles(path).Select(file => new Files
+        if (!Directory.Exists(fullPath))
+            throw new ArgumentException("El directorio no existe.");
+
+        var files = new List<Files>();
+
+        foreach (var file in Directory.GetFiles(fullPath))
         {
-            Name = Path.GetFileName(file),
-            Path = file,
-            Size = new FileInfo(file).Length
-        }).ToList();
+            files.Add(new Files
+            {
+                Name = Path.GetFileName(file),
+                Path = file,
+                Size = new FileInfo(file).Length,
+                CreatedAt = new FileInfo(file).CreationTime,
+                ModifiedAt = new FileInfo(file).LastWriteTime
+            });
+        }
 
         return files;
     }

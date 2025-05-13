@@ -15,7 +15,7 @@ public class FileController : ControllerBase
     }
 
     [HttpGet]
-    [Route("files")]
+    [Route("list")]
     public async Task<IActionResult> GetFilesAsync(string path)
     {
         var files = await _fileServices.GetFilesAsync(path);
@@ -24,11 +24,25 @@ public class FileController : ControllerBase
     }
 
     [HttpGet]
-    [Route("files/{filePath}")]
+    [Route("{filePath}")]
     public async Task<IActionResult> ReadFileAsync(string filePath)
     {
         var file = await _fileServices.ReadFileAsync(filePath);
 
         return Ok(file);
+    }
+
+    [HttpDelete]
+    [Route("{filePath}")]
+    public Task<IActionResult> DeleteFileAsync(string filePath)
+    {
+        throw new NotImplementedException();
+    }
+
+    [HttpPost]
+    [Route("{filePath}")]
+    public Task<IActionResult> CreateFileAsync(string filePath)
+    {
+        throw new NotImplementedException();
     }
 }
