@@ -1,0 +1,11 @@
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/bin/Debug/net9.0/Domain.deps.json
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/bin/Debug/net9.0/Domain.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/bin/Debug/net9.0/Domain.pdb
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/Domain.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/refint/Domain.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/Domain.pdb
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/ref/Domain.dll

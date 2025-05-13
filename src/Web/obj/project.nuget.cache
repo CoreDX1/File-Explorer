@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tUOTQKzt5tU=",
+  "dgSpecHash": "zVriSH5hnL8=",
   "success": true,
   "projectFilePath": "/home/christian/Desktop/Projects/File-Explorer/src/Web/Web.csproj",
   "expectedPackageFiles": [
     "/home/christian/.nuget/packages/microsoft.aspnetcore.openapi/9.0.4/microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "/home/christian/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.4/microsoft.extensions.dependencyinjection.9.0.4.nupkg.sha512",
+    "/home/christian/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.4/microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512",
     "/home/christian/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
   ],
   "logs": []
