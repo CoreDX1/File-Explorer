@@ -10,26 +10,18 @@ interface FileItem {
   size?: string;
 }
 
-
 @Component({
   selector: 'app-root',
-  standalone: true, // <--- Ensure component is standalone
-  imports: [
-    CommonModule,  // <--- Import CommonModule for structural directives
-    FormsModule    // <--- Import FormsModule here
-  ],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './app.component.html',
-  // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // ... rest of your component logic from the previous example ...
   searchQuery: string = '';
   showNewFolderModal: boolean = false;
   newFolderName: string = '';
 
-  mockFiles: FileItem[] = [
-     // ... your mock data
-  ];
+  mockFiles: FileItem[] = [];
 
   get filteredFiles(): FileItem[] {
     // ... filter logic
@@ -52,17 +44,17 @@ export class AppComponent {
   }
 
   createFolder(): void {
-     if (!this.newFolderName.trim()) {
-       alert("Please enter a folder name.");
-       return;
-     }
+    if (!this.newFolderName.trim()) {
+      alert('Please enter a folder name.');
+      return;
+    }
     const newFolder: FileItem = {
-        name: this.newFolderName.trim(),
-        type: 'folder',
-        modified: 'Just now'
+      name: this.newFolderName.trim(),
+      type: 'folder',
+      modified: 'Just now',
     };
     this.mockFiles.unshift(newFolder);
-    console.log("Creating folder:", this.newFolderName);
+    console.log('Creating folder:', this.newFolderName);
     this.closeNewFolderModal();
   }
 
@@ -71,9 +63,19 @@ export class AppComponent {
   }
 
   // ... other placeholder methods
-   uploadFiles(): void { console.log("Upload"); }
-   downloadFiles(): void { console.log("Download"); }
-   createNewFile(): void { console.log("New File"); }
-   openSettings(): void { console.log("Settings"); }
-   navigateToMyFiles(): void { console.log("My Files"); }
+  uploadFiles(): void {
+    console.log('Upload');
+  }
+  downloadFiles(): void {
+    console.log('Download');
+  }
+  createNewFile(): void {
+    console.log('New File');
+  }
+  openSettings(): void {
+    console.log('Settings');
+  }
+  navigateToMyFiles(): void {
+    console.log('My Files');
+  }
 }
