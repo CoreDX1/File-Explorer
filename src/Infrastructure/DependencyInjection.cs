@@ -9,5 +9,6 @@ public static class DependencyInjection
     public static void AddInfrastructureServices(this IServiceCollection services)
     {
         services.AddScoped<IFileRepository, FileRepository>();
+        services.AddScoped<IFolderRepository, FolderRepository>();
     }
 }

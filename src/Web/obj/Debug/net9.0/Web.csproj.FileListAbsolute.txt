@@ -46,3 +46,14 @@
 /home/christian/Desktop/Projects/File-Explorer/src/Web/obj/Debug/net9.0/Web.pdb
 /home/christian/Desktop/Projects/File-Explorer/src/Web/obj/Debug/net9.0/Web.genruntimeconfig.cache
 /home/christian/Desktop/Projects/File-Explorer/src/Web/obj/Debug/net9.0/ref/Web.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
