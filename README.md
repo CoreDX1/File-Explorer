@@ -1,6 +1,29 @@
-# File-Explorer
+<h1 align="center">File-Explorer 📂</h1>
 
-Un explorador de archivos simple y potente, desarrollado para ofrecer una gestión de archivos y directorios intuitiva y eficiente.
+<p align="center">
+  <strong>Un explorador de archivos simple y potente, desarrollado para ofrecer una gestión de archivos y directorios intuitiva y eficiente.</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-Angular-red" alt="Frontend Angular">
+  <img src="https://img.shields.io/badge/Backend-.NET%20Core-blueviolet" alt="Backend .NET Core">
+</p>
+
+## Tabla de Contenidos
+
+*   [Descripción General](#descripción-general)
+*   [Características Principales](#características-principales)
+*   [Vistazo a la Aplicación](#vistazo-a-la-aplicación)
+*   [Tecnologías Utilizadas](#tecnologías-utilizadas)
+*   [Arquitectura del Proyecto](#arquitectura-del-proyecto)
+*   [Patrones de Diseño Utilizados](#patrones-de-diseño-utilizados)
+*   [Prerrequisitos](#prerrequisitos)
+*   [Instalación](#instalación)
+*   [Uso](#uso)
+*   [Roadmap (Funcionalidades Futuras)](#roadmap-funcionalidades-futuras)
+*   [Contribuciones](#contribuciones)
+*   [Licencia](#licencia)
+*   [Contacto](#contacto)
 
 ## Descripción General
 
@@ -8,23 +31,35 @@ File-Explorer es una aplicación de escritorio moderna que permite a los usuario
 
 ## Características Principales
 
-*   **Navegación Intuitiva:** Explore su sistema de archivos con una estructura de árbol de directorios clara y fácil de usar.
-*   **Visualización Detallada:** Vea el contenido de las carpetas, incluyendo detalles de archivos y previsualizaciones (si aplica).
-*   **Operaciones Básicas de Archivos:** (Añade aquí más características a medida que las desarrolles, por ejemplo: copiar, pegar, renombrar, eliminar archivos/carpetas, crear nuevas carpetas, búsqueda de archivos, etc.)
+*   ✅ **Navegación Intuitiva:** Explore su sistema de archivos con una estructura de árbol de directorios clara y fácil de usar.
+*   ✅ **Visualización Detallada:** Vea el contenido de las carpetas, incluyendo detalles de archivos y previsualizaciones (si aplica).
+*   ⏳ **Operaciones Básicas de Archivos:**
+    *   Copiar archivos/carpetas
+    *   Pegar archivos/carpetas
+    *   Renombrar archivos/carpetas
+    *   Eliminar archivos/carpetas
+    *   Crear nuevas carpetas
+    *   Búsqueda de archivos
+    *   *(Más características se añadirán progresivamente)*
 
 ## Vistazo a la Aplicación
 
-*(Aquí puedes añadir una captura de pantalla general de la aplicación)*
+<p align="center">
+  <img src="image/Folder.png" alt="UI File-Explorer" width="60%">
+  <br>
+  <em>Navegación de carpetas en File-Explorer.</em>
+</p>
 
-`![Vista Principal de File-Explorer](ruta/a/tu/imagen_principal.png)`
-![Swagger](image/Swagger.png)
-
-![UI](image/Folder.png)
+<p align="center">
+  <img src="image/Swagger.png" alt="Swagger API" width="60%">
+  <br>
+  <em>Documentación de la API con Swagger.</em>
+</p>
 
 ## Tecnologías Utilizadas
 
-*   **Frontend:** Angular
-*   **Backend:** .NET Core
+*   **Frontend:** [Angular](https://angular.io/)
+*   **Backend:** [.NET Core](https://dotnet.microsoft.com/)
 
 ## Arquitectura del Proyecto
 
@@ -33,6 +68,7 @@ El proyecto sigue una arquitectura por capas (Layered Architecture), comúnmente
 *   **Web (Capa de Presentación):** Responsable de manejar las solicitudes HTTP, la interfaz de usuario (frontend con Angular) y la API (backend con .NET Core).
 *   **Application (Capa de Aplicación):** Contiene la lógica de negocio y los casos de uso de la aplicación. Orquesta las interacciones entre la capa de presentación y la capa de infraestructura.
 *   **Infrastructure (Capa de Infraestructura):** Se encarga de las implementaciones concretas de las abstracciones definidas en la capa de aplicación, como el acceso a datos, servicios externos, etc.
+*   **Domain (Capa de Dominio):** Contiene las entidades y las reglas de negocio de la aplicación.
 
 ## Patrones de Diseño Utilizados
 
@@ -41,53 +77,3 @@ El proyecto sigue una arquitectura por capas (Layered Architecture), comúnmente
 *   **Component-Based Architecture:** El frontend (Angular) está construido utilizando componentes reutilizables, un pilar fundamental de Angular.
 *   **Repository Pattern (probable):** Aunque no se ha inspeccionado directamente el código de la capa de infraestructura, es común que en arquitecturas de este tipo se utilice el patrón Repository para abstraer el acceso a datos.
 *   **Service Pattern (probable):** La capa de aplicación suele implementar servicios que encapsulan la lógica de negocio.
-
-## Requisitos Previos
-
-Para compilar y ejecutar este proyecto, necesitarás:
-
-*   [.NET SDK](https://dotnet.microsoft.com/download) (Se recomienda la versión X.X o superior)
-*   [Node.js y npm](https://nodejs.org/) (Para la parte de Angular, se recomienda la versión X.X de Node y X.X de npm o superior)
-*   Angular CLI: `npm install -g @angular/cli` (Versión X.X o superior)
-*   Visual Studio 2019/2022 (Opcional, pero recomendado para el desarrollo de .NET)
-*   Un editor de código como Visual Studio Code (Recomendado para el desarrollo de Angular)
-
-## Instalación y Ejecución
-
-Sigue estos pasos para poner en marcha el proyecto:
-
-1.  **Clona el repositorio:**
-    ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd File-Explorer
-    ```
-
-2.  **Configuración del Backend (.NET Core):**
-    *   Navega al directorio del proyecto backend (donde se encuentra el archivo `.csproj`):
-        ```bash
-        cd src/File-Explorer.Api # Ajusta esta ruta si es diferente
-        ```
-    *   Restaura las dependencias:
-        ```bash
-        dotnet restore
-        ```
-    *   Ejecuta la API (esto podría variar según tu configuración):
-        ```bash
-        dotnet run
-        ```
-
-3.  **Configuración del Frontend (Angular):**
-    *   En una nueva terminal, navega al directorio del proyecto frontend:
-        ```bash
-        cd src/File-Explorer.Web # Ajusta esta ruta si es diferente
-        ```
-    *   Instala las dependencias:
-        ```bash
-        npm install
-        ```
-    *   Inicia el servidor de desarrollo de Angular:
-        ```bash
-        ng serve --open
-        ```
-
-    La aplicación debería abrirse automáticamente en tu navegador predeterminado.
