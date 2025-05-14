@@ -9,7 +9,7 @@ public class FolderRepository : IFolderRepository
 
     private string FullPath = "/home/christian/Desktop/Projects/File-Explorer/CONTENEDOR";
 
-    public async Task<List<DirectoryItem>> GetSubFoldersAsync(string path)
+    public List<DirectoryItem> GetSubFolders(string path)
     {
         string fullPath = Path.Combine(FullPath, path);
 
@@ -32,7 +32,7 @@ public class FolderRepository : IFolderRepository
         return subFolders;
     }
 
-    public async Task<List<FileItem>> GetFilesAsync(string path)
+    public List<FileItem> GetFiles(string path)
     {
         string fullPath = Path.Combine(FullPath, path);
 
@@ -56,50 +56,49 @@ public class FolderRepository : IFolderRepository
         return files;
     }
 
-    public async Task<string> ReadFileAsync(string filePath)
+    public string ReadFile(string filePath)
     {
         string fullPath = Path.Combine(FullPath, filePath);
 
         if (!File.Exists(fullPath))
             throw new ArgumentException("El archivo no existe.");
 
-        return await File.ReadAllTextAsync(fullPath);
+        return File.ReadAllText(fullPath);
     }
 
-    public Task RenameFolderAsync(string oldPath, string newPath)
+    public bool RenameFolder(string oldPath, string newPath)
     {
         string fullPath = Path.Combine(FullPath, oldPath);
         string newFullPath = Path.Combine(FullPath, newPath);
 
         if (!Directory.Exists(fullPath))
-            throw new ArgumentException("El directorio no existe.");
+            return false;
 
         Directory.Move(fullPath, newFullPath);
 
-        return Task.CompletedTask;
+        return true;
     }
 
-    public Task DeleteFolderAsync(string path)
+    public bool DeleteFolder(string path)
     {
         string fullPath = Path.Combine(FullPath, path);
 
         if (!Directory.Exists(fullPath))
-            throw new ArgumentException("El directorio no existe.");
+            return false;
 
         Directory.Delete(fullPath, true);
+        return true;
 
-        return Task.CompletedTask;
     }
 
-    public Task CreateFolderAsync(string path)
+    public bool CreateFolder(string path)
     {
         string fullPath = Path.Combine(FullPath, path);
 
         if (Directory.Exists(fullPath))
-            throw new ArgumentException("El directorio ya existe.");
+            return false;
 
         Directory.CreateDirectory(fullPath);
-
-        return Task.CompletedTask;
+        return true;
     }
 }

@@ -57,3 +57,4 @@
 /home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Ardalis.Result.dll

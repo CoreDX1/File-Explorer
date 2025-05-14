@@ -1,7 +1,11 @@
 namespace Web.Controllers;
 
 using Application.Services.Interfaces;
+using Ardalis.Result;
+using Domain.Entities;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -16,61 +20,33 @@ public class FolderController : ControllerBase
 
     [HttpGet]
     [Route("list")]
-    public async Task<IActionResult> GetSubFoldersAsync(string path)
+    public Result<List<DirectoryItem>> GetSubFolders(string path)
     {
-        var subFolders = await _folderServices.GetSubFoldersAsync(path);
-
-        return Ok(subFolders);
+        return _folderServices.GetSubFolders(path);
     }
 
     [HttpGet]
     [Route("{path}")]
-    public async Task<IActionResult> GetFilesAsync(string path)
+    public Result<List<FileItem>> GetFiles(string path)
     {
-        var files = await _folderServices.GetFilesAsync(path);
-
-        return Ok(files);
+        return _folderServices.GetFiles(path);
     }
 
     [HttpPut("rename")]
-    public async Task<IActionResult> RenameFolder(string oldPath, string newPath)
+    public Result<string> RenameFolder(string oldPath, string newPath)
     {
-        try
-        {
-            await _folderServices.RenameFolderAsync(oldPath, newPath);
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        return _folderServices.RenameFolder(oldPath, newPath);
     }
 
     [HttpDelete("delete")]
-    public async Task<IActionResult> DeleteFolder(string path)
+    public Result<string> DeleteFolder(string path)
     {
-        try
-        {
-            await _folderServices.DeleteFolderAsync(path);
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        return _folderServices.DeleteFolder(path);
     }
 
     [HttpPost("create")]
-    public async Task<IActionResult> CreateFolder(string path)
+    public Result<string> CreateFolder(string path)
     {
-        try
-        {
-            await _folderServices.CreateFolderAsync(path);
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        return _folderServices.CreateFolder(path);
     }
 }

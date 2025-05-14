@@ -1,14 +1,15 @@
+using Ardalis.Result;
 using Domain.Entities;
 
 namespace Application.Services.Interfaces;
 
 public interface IFolderServices
 {
-    Task<List<DirectoryItem>> GetSubFoldersAsync(string path);
-    Task<List<FileItem>> GetFilesAsync(string path);
-    Task<string> ReadFileAsync(string filePath);
+    Result<List<DirectoryItem>> GetSubFolders(string path);
+    Result<List<FileItem>> GetFiles(string path);
+    Result<string> ReadFile(string filePath);
 
-    Task CreateFolderAsync(string path);
-    Task RenameFolderAsync(string oldPath, string newPath);
-    Task DeleteFolderAsync(string path);
+    Result<string> CreateFolder(string path);
+    Result<string> RenameFolder(string oldPath, string newPath);
+    Result<string> DeleteFolder(string path);
 }

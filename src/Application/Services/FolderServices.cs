@@ -1,6 +1,7 @@
 namespace Application.Services;
 
 using Application.Services.Interfaces;
+using Ardalis.Result;
 using Domain.Entities;
 using Domain.Interfaces;
 
@@ -14,33 +15,51 @@ public class FolderServices : IFolderServices
         _folderRepository = folderRepository;
     }
 
-    public async Task<List<DirectoryItem>> GetSubFoldersAsync(string path)
+    public Result<List<DirectoryItem>> GetSubFolders(string path)
     {
-        return await _folderRepository.GetSubFoldersAsync(path);
+        return _folderRepository.GetSubFolders(path);
     }
 
-    public async Task<List<FileItem>> GetFilesAsync(string path)
+    public Result<List<FileItem>> GetFiles(string path)
     {
-        return await _folderRepository.GetFilesAsync(path);
+        return _folderRepository.GetFiles(path);
     }
 
-    public Task<string> ReadFileAsync(string filePath)
+    public Result<string> ReadFile(string filePath)
     {
-        return _folderRepository.ReadFileAsync(filePath);
+        var file = _folderRepository.ReadFile(filePath);
+
+        return Result.Success(file, "El archivo fue leido correctamente.");
+
     }
 
-    public Task CreateFolderAsync(string path)
+    public Result<string> CreateFolder(string path)
     {
-        return _folderRepository.CreateFolderAsync(path);
+        var folder = _folderRepository.CreateFolder(path);
+
+        if (!folder)
+            return Result.NotFound("El directorio no pudo ser creado.");
+
+        return Result.Success("El directorio fue creado correctamente.");
     }
 
-    public Task RenameFolderAsync(string oldPath, string newPath)
+    public Result<string> RenameFolder(string oldPath, string newPath)
     {
-        return _folderRepository.RenameFolderAsync(oldPath, newPath);
+        var folder = _folderRepository.RenameFolder(oldPath, newPath);
+
+        if (!folder)
+            return Result.NotFound("El directorio no pudo ser renombrado.");
+
+        return Result.Success("El directorio fue renombrado correctamente.");
     }
 
-    public Task DeleteFolderAsync(string path)
+    public Result<string> DeleteFolder(string path)
     {
-        return _folderRepository.DeleteFolderAsync(path);
+        var folder = _folderRepository.DeleteFolder(path);
+
+        if (!folder)
+            return Result.NotFound("El directorio no pudo ser borrado.");
+
+        return Result.Success("El directorio fue borrado correctamente.");
     }
 }

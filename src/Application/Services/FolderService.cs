@@ -1,5 +1,3 @@
-using System.IO;
-using System.Threading.Tasks;
 using Domain.Interfaces;
 
 namespace Application.Services

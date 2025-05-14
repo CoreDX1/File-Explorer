@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rQ3RCK4vzJo=",
+  "dgSpecHash": "EardO4k29/4=",
   "success": true,
   "projectFilePath": "/home/christian/Desktop/Projects/File-Explorer/src/Web/Web.csproj",
   "expectedPackageFiles": [
+    "/home/christian/.nuget/packages/ardalis.result/10.1.0/ardalis.result.10.1.0.nupkg.sha512",
     "/home/christian/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/9.0.4/microsoft.aspnetcore.authentication.jwtbearer.9.0.4.nupkg.sha512",
     "/home/christian/.nuget/packages/microsoft.aspnetcore.openapi/9.0.4/microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
     "/home/christian/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
