@@ -2,6 +2,14 @@
 
 Un explorador de archivos simple y potente, desarrollado para ofrecer una gestión de archivos y directorios intuitiva y eficiente.
 
+## Imagenes de la aplicación
+
+# Swagger Api
+![alt text](imagenes/Swagger.png)
+
+# Interface de usuario
+![alt text](imagenes/Folder.png)
+
 ## Descripción General
 
 File-Explorer es una aplicación de escritorio moderna que permite a los usuarios navegar por el sistema de archivos, visualizar el contenido de los directorios y realizar operaciones esenciales con archivos y carpetas. La interfaz de usuario está construida con Angular, proporcionando una experiencia fluida y reactiva, mientras que la lógica del backend se maneja con .NET Core, asegurando robustez y rendimiento.
@@ -88,33 +96,3 @@ Sigue estos pasos para poner en marcha el proyecto:
         ```
 
     La aplicación debería abrirse automáticamente en tu navegador predeterminado.
-
-## Uso
-
-Una vez que la aplicación esté en ejecución, podrás:
-
-*   Navegar por el árbol de directorios en el panel izquierdo.
-*   Ver el contenido de la carpeta seleccionada en el panel principal.
-*   *(Añade aquí instrucciones más detalladas sobre cómo usar las diferentes características)*
-
-*(Aquí puedes añadir capturas de pantalla de características específicas)*
-
-`![Navegación de Directorios](ruta/a/tu/imagen_navegacion.png)`
-
-`![Visualización de Archivos](ruta/a/tu/imagen_archivos.png)`
-
-## Contribuir
-
-¡Las contribuciones son bienvenidas! Si deseas contribuir, por favor:
-
-1.  Haz un Fork del proyecto.
-2.  Crea tu Feature Branch (`git checkout -b feature/AmazingFeature`).
-3.  Realiza tus Commits (`git commit -m 'Add some AmazingFeature'`).
-4.  Haz Push a la Branch (`git push origin feature/AmazingFeature`).
-5.  Abre un Pull Request.
-
-Por favor, abre un *issue* para discutir cambios importantes antes de realizar un *pull request*.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles (si añades uno).
