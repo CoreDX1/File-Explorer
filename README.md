@@ -5,10 +5,12 @@ Un explorador de archivos simple y potente, desarrollado para ofrecer una gesti�
 ## Imagenes de la aplicación
 
 # Swagger Api
-![alt text](imagenes/Swagger.png)
+
+![Swagger](imagenes/Swagger.png)
 
 # Interface de usuario
-![alt text](imagenes/Folder.png)
+
+![UI](imagenes/Folder.png)
 
 ## Descripción General
 
