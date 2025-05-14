@@ -31,4 +31,46 @@ public class FolderController : ControllerBase
 
         return Ok(files);
     }
+
+    [HttpPut("rename")]
+    public async Task<IActionResult> RenameFolder(string oldPath, string newPath)
+    {
+        try
+        {
+            await _folderServices.RenameFolderAsync(oldPath, newPath);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [HttpDelete("delete")]
+    public async Task<IActionResult> DeleteFolder(string path)
+    {
+        try
+        {
+            await _folderServices.DeleteFolderAsync(path);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [HttpPost("create")]
+    public async Task<IActionResult> CreateFolder(string path)
+    {
+        try
+        {
+            await _folderServices.CreateFolderAsync(path);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
 }

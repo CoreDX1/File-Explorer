@@ -6,9 +6,10 @@ namespace Application;
 
 public static class DependencyInjection
 {
-    public static void AddApplicationServices(this IServiceCollection services)
+    public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
         services.AddScoped<IFileServices, FileServices>();
         services.AddScoped<IFolderServices, FolderServices>();
+        return services;
     }
 }

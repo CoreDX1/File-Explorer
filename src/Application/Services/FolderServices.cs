@@ -28,4 +28,19 @@ public class FolderServices : IFolderServices
     {
         return _folderRepository.ReadFileAsync(filePath);
     }
+
+    public Task CreateFolderAsync(string path)
+    {
+        return _folderRepository.CreateFolderAsync(path);
+    }
+
+    public Task RenameFolderAsync(string oldPath, string newPath)
+    {
+        return _folderRepository.RenameFolderAsync(oldPath, newPath);
+    }
+
+    public Task DeleteFolderAsync(string path)
+    {
+        return _folderRepository.DeleteFolderAsync(path);
+    }
 }
