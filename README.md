@@ -2,16 +2,6 @@
 
 Un explorador de archivos simple y potente, desarrollado para ofrecer una gestión de archivos y directorios intuitiva y eficiente.
 
-## Imagenes de la aplicación
-
-# Swagger Api
-
-![Swagger](imagenes/Swagger.png)
-
-# Interface de usuario
-
-![UI](imagenes/Folder.png)
-
 ## Descripción General
 
 File-Explorer es una aplicación de escritorio moderna que permite a los usuarios navegar por el sistema de archivos, visualizar el contenido de los directorios y realizar operaciones esenciales con archivos y carpetas. La interfaz de usuario está construida con Angular, proporcionando una experiencia fluida y reactiva, mientras que la lógica del backend se maneja con .NET Core, asegurando robustez y rendimiento.
@@ -27,6 +17,9 @@ File-Explorer es una aplicación de escritorio moderna que permite a los usuario
 *(Aquí puedes añadir una captura de pantalla general de la aplicación)*
 
 `![Vista Principal de File-Explorer](ruta/a/tu/imagen_principal.png)`
+![Swagger](image/Swagger.png)
+
+![UI](image/Folder.png)
 
 ## Tecnologías Utilizadas
 
