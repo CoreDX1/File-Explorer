@@ -3,9 +3,7 @@ namespace Web.Controllers;
 using Application.Services.Interfaces;
 using Ardalis.Result;
 using Domain.Entities;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
 
 [ApiController]
 [Route("api/[controller]")]
