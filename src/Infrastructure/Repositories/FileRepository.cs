@@ -5,26 +5,25 @@ namespace Infrastructure.Repositories;
 
 public class FileRepository : IFileRepository
 {
-    public async Task<List<Files>> GetFilesAsync(string path)
+    public async Task<List<FileItem>> GetFilesAsync(string path)
     {
-
         string fullPath = Path.Combine("/home/christian/Desktop/Projects/File-Explorer/CONTENEDOR", path);
 
         if (!Directory.Exists(fullPath))
             throw new ArgumentException("El directorio no existe.");
 
-        var files = new List<Files>();
+        var files = new List<FileItem>();
 
         foreach (var file in Directory.GetFiles(fullPath))
         {
-            files.Add(new Files
-            {
-                Name = Path.GetFileName(file),
-                Path = file,
-                Size = new FileInfo(file).Length,
-                CreatedAt = new FileInfo(file).CreationTime,
-                ModifiedAt = new FileInfo(file).LastWriteTime
-            });
+            var fileInfo = new FileInfo(file);
+            files.Add(new FileItem(
+                name: Path.GetFileName(file),
+                path: file,
+                size: fileInfo.Length,
+                createdAt: fileInfo.CreationTime,
+                modifiedAt: fileInfo.LastWriteTime
+            ));
         }
 
         return files;

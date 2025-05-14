@@ -4,7 +4,7 @@ namespace Domain.Interfaces;
 
 public interface IFolderRepository
 {
-    public Task<List<Folder>> GetSubFoldersAsync(string path);
-    public Task<List<Files>> GetFilesAsync(string path);
+    public Task<List<DirectoryItem>> GetSubFoldersAsync(string path);
+    public Task<List<FileItem>> GetFilesAsync(string path);
     public Task<string> ReadFileAsync(string filePath);
 }

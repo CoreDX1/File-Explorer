@@ -14,12 +14,12 @@ public class FolderServices : IFolderServices
         _folderRepository = folderRepository;
     }
 
-    public async Task<List<Folder>> GetSubFoldersAsync(string path)
+    public async Task<List<DirectoryItem>> GetSubFoldersAsync(string path)
     {
         return await _folderRepository.GetSubFoldersAsync(path);
     }
 
-    public async Task<List<Files>> GetFilesAsync(string path)
+    public async Task<List<FileItem>> GetFilesAsync(string path)
     {
         return await _folderRepository.GetFilesAsync(path);
     }
