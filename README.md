@@ -23,6 +23,22 @@ File-Explorer es una aplicación de escritorio moderna que permite a los usuario
 *   **Frontend:** Angular
 *   **Backend:** .NET Core
 
+## Arquitectura del Proyecto
+
+El proyecto sigue una arquitectura por capas (Layered Architecture), comúnmente asociada con los principios de la Arquitectura Limpia (Clean Architecture). Esta separación de responsabilidades se evidencia en la estructura del proyecto con las siguientes capas principales:
+
+*   **Web (Capa de Presentación):** Responsable de manejar las solicitudes HTTP, la interfaz de usuario (frontend con Angular) y la API (backend con .NET Core).
+*   **Application (Capa de Aplicación):** Contiene la lógica de negocio y los casos de uso de la aplicación. Orquesta las interacciones entre la capa de presentación y la capa de infraestructura.
+*   **Infrastructure (Capa de Infraestructura):** Se encarga de las implementaciones concretas de las abstracciones definidas en la capa de aplicación, como el acceso a datos, servicios externos, etc.
+
+## Patrones de Diseño Utilizados
+
+*   **Dependency Injection (DI):** Utilizado extensivamente en el backend (.NET Core) para desacoplar componentes y facilitar la mantenibilidad y testabilidad. Se observa en la configuración de servicios en `Program.cs`.
+*   **Model-View-Controller (MVC) / API Controllers:** El backend utiliza controladores para gestionar las solicitudes HTTP y las respuestas, siguiendo un patrón similar a MVC para las APIs.
+*   **Component-Based Architecture:** El frontend (Angular) está construido utilizando componentes reutilizables, un pilar fundamental de Angular.
+*   **Repository Pattern (probable):** Aunque no se ha inspeccionado directamente el código de la capa de infraestructura, es común que en arquitecturas de este tipo se utilice el patrón Repository para abstraer el acceso a datos.
+*   **Service Pattern (probable):** La capa de aplicación suele implementar servicios que encapsulan la lógica de negocio.
+
 ## Requisitos Previos
 
 Para compilar y ejecutar este proyecto, necesitarás:
