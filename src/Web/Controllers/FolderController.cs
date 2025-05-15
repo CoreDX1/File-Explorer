@@ -17,32 +17,32 @@ public class FolderController : ControllerBase
     }
 
     [HttpGet]
-    [Route("list")]
+    [Route("list")] // GET /api/folder/list
     public Result<List<DirectoryItem>> GetSubFolders(string path)
     {
         return _folderServices.GetSubFolders(path);
     }
 
     [HttpGet]
-    [Route("{path}")]
+    [Route("{path}")] // GET /api/folder/list
     public Result<List<FileItem>> GetFiles(string path)
     {
         return _folderServices.GetFiles(path);
     }
 
-    [HttpPut("rename")]
+    [HttpPut("rename")] // PUT /api/folder/rename
     public Result<string> RenameFolder(string oldPath, string newPath)
     {
         return _folderServices.RenameFolder(oldPath, newPath);
     }
 
-    [HttpDelete("delete")]
+    [HttpDelete("delete")] // DELETE /api/folder/delete
     public Result<string> DeleteFolder(string path)
     {
         return _folderServices.DeleteFolder(path);
     }
 
-    [HttpPost("create")]
+    [HttpPost("create")] // POST /api/folder/create
     public Result<string> CreateFolder(string path)
     {
         return _folderServices.CreateFolder(path);
