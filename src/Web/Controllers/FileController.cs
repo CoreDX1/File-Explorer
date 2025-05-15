@@ -16,18 +16,18 @@ public class FileController : ControllerBase
 
     [HttpGet]
     [Route("list")]
-    public async Task<IActionResult> GetFilesAsync(string path)
+    public IActionResult GetFiles(string path)
     {
-        var files = await _fileServices.GetFilesAsync(path);
+        var files = _fileServices.GetFiles(path);
 
         return Ok(files);
     }
 
     [HttpGet]
     [Route("{filePath}")]
-    public async Task<IActionResult> ReadFileAsync(string filePath)
+    public IActionResult ReadFile(string filePath)
     {
-        var file = await _fileServices.ReadFileAsync(filePath);
+        var file = _fileServices.ReadFile(filePath);
 
         return Ok(file);
     }

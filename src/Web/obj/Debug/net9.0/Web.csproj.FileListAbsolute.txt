@@ -58,3 +58,4 @@
 /home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
 /home/christian/Desktop/Projects/File-Explorer/src/Web/bin/Debug/net9.0/Ardalis.Result.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Web/obj/Debug/net9.0/Web.sourcelink.json

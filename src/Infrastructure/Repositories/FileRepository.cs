@@ -5,7 +5,7 @@ namespace Infrastructure.Repositories;
 
 public class FileRepository : IFileRepository
 {
-    public async Task<List<FileItem>> GetFilesAsync(string path)
+    public List<FileItem> GetFilesAsync(string path)
     {
         string fullPath = Path.Combine("/home/christian/Desktop/Projects/File-Explorer/CONTENEDOR", path);
 
@@ -29,7 +29,7 @@ public class FileRepository : IFileRepository
         return files;
     }
 
-    public Task<string> ReadFileAsync(string filePath)
+    public string ReadFileAsync(string filePath)
     {
         throw new NotImplementedException();
     }

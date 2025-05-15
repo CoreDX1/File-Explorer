@@ -13,12 +13,12 @@ public class FileServices : IFileServices
         _fileRepository = fileRepository;
     }
 
-    public async Task<List<FileItem>> GetFilesAsync(string path)
+    public List<FileItem> GetFiles(string path)
     {
-        return await _fileRepository.GetFilesAsync(path);
+        return _fileRepository.GetFilesAsync(path);
     }
 
-    public Task<string> ReadFileAsync(string filePath)
+    public string ReadFile(string filePath)
     {
         return _fileRepository.ReadFileAsync(filePath);
     }

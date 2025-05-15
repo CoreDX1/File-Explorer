@@ -9,3 +9,4 @@
 /home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/refint/Domain.dll
 /home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/Domain.pdb
 /home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/ref/Domain.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Domain/obj/Debug/net9.0/Domain.sourcelink.json

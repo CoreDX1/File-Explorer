@@ -15,3 +15,4 @@
 /home/christian/Desktop/Projects/File-Explorer/src/Infrastructure/obj/Debug/net9.0/Infrastructure.pdb
 /home/christian/Desktop/Projects/File-Explorer/src/Infrastructure/obj/Debug/net9.0/Infrastructure.genruntimeconfig.cache
 /home/christian/Desktop/Projects/File-Explorer/src/Infrastructure/obj/Debug/net9.0/ref/Infrastructure.dll
+/home/christian/Desktop/Projects/File-Explorer/src/Infrastructure/obj/Debug/net9.0/Infrastructure.sourcelink.json
