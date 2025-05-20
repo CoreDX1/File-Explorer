@@ -77,3 +77,5 @@ El proyecto sigue una arquitectura por capas (Layered Architecture), comúnmente
 *   **Component-Based Architecture:** El frontend (Angular) está construido utilizando componentes reutilizables, un pilar fundamental de Angular.
 *   **Repository Pattern (probable):** Aunque no se ha inspeccionado directamente el código de la capa de infraestructura, es común que en arquitecturas de este tipo se utilice el patrón Repository para abstraer el acceso a datos.
 *   **Service Pattern (probable):** La capa de aplicación suele implementar servicios que encapsulan la lógica de negocio.
+
+111
